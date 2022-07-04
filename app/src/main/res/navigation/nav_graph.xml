@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.sobhan.assembler.UI.FirstFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment2"
+            app:destination="@id/secondFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment2"
+        android:name="com.sobhan.assembler.UI.SecondFragment"
+        android:label="Items"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_secondFragment2_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.sobhan.assembler.UI.ThirdFragment"
+        android:label="Assemble"
+        tools:layout="@layout/fragment_third">
+        <action
+            android:id="@+id/action_thirdFragment_to_forthFragment"
+            app:destination="@id/forthFragment" />
+        <argument android:name="itemList"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/forthFragment"
+        android:name="com.sobhan.assembler.UI.ForthFragment"
+        android:label="Paint"
+        tools:layout="@layout/fragment_forth">
+        <action
+            android:id="@+id/action_forthFragment_to_fifthFragment"
+            app:destination="@id/fifthFragment" />
+        <argument
+            android:name="assembledItems"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthFragment"
+        android:name="com.sobhan.assembler.UI.FifthFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_fifth" >
+        <action
+            android:id="@+id/action_fifthFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="product"
+            app:argType="string[]" />
+        <argument
+            android:name="colorCode"
+            app:argType="string[]" />
+    </fragment>
+</navigation>

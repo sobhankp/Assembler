@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Assembler</string>
+    <string name="intro">The Product is a full collection of human attire. The product is basically divided into 5 different parts.
+        The different parts of the whole product are Cap, Specs, T-Shirt, Jean , Shoe. User can customize the selection of each parts with giving different color to each of the part.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
